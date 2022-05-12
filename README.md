@@ -6,7 +6,7 @@ Les cordes (en anglais, ropes) sont une structure arborescente qui permet de rep
 Plus précisément, une corde est un arbre binaire dont chaque feuille contient une chaîne de caractère.
 
 ### Question 1: 
-Définissez un type `rope` qui permette de représenter les cordes.
+Définissez un type `rope` qui permet de représenter les cordes.
 
 ### Question 2: 
 Définissez une valeur `example1 : rope` qui représente la corde déssinée ci-dessus.
