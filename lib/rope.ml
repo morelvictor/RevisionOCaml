@@ -12,9 +12,9 @@ let length r =
         | Leaf(s) -> acc + String.length s
     in aux r 0
 
-let rec nth r i = 
+(*let rec nth r i = 
     if i < 0 || length r <= i then None 
     else 
         match r with
-        | Node(x, y) -> 
+        | Node(x, y) -> *)
         

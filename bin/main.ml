@@ -18,4 +18,5 @@ let () =
     print_int (length example1); 
     print_newline();
     print_int (length example2);
+    print_endline("");
 
