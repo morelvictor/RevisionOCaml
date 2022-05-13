@@ -1,6 +1,7 @@
 
-open Lib.Rope
+open Lib.Fifo
 
+(* 
 let example1 = 
     Node(
         Node(
@@ -13,15 +14,11 @@ let example1 =
             Leaf("!")))
 
 let example2 = Node(Leaf("Hello, "), Leaf("world!"))
+*)
+
+let uniter a = match a with _ -> ()
 
 let () = 
-    print_int (length example1); 
-    print_newline();
-    print_int (length example2);
-    print_newline();
-    print_string((string_of_rope example1) ^ "\n");
-    (match (nth example1 1) with
-    | Some(x) -> print_char x
-    | None -> ());
+    uniter(make 2 10);
     print_endline("");
 
