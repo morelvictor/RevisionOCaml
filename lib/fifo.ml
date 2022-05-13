@@ -42,3 +42,8 @@ let pop f = if f.empty then raise Empty else
 let is_empty f = f.empty
 
 let is_full f = f.full
+
+let rec iter f l = 
+  try 
+    let x = pop l in f x; iter f l
+  with Empty -> ()
