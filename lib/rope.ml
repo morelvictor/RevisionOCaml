@@ -12,9 +12,15 @@ let length r =
         | Leaf(s) -> acc + String.length s
     in aux r 0
 
-(*let rec nth r i = 
-    if i < 0 || length r <= i then None 
-    else 
+let string_of_rope r = 
+    let rec aux acc r =
         match r with
-        | Node(x, y) -> *)
-        
+        | Leaf(s) -> acc ^ s
+        | Node(x, y) -> acc ^ (aux "" x) ^ (aux "" y)
+    in aux "" r
+
+let nth r i = 
+    if i < 0 || i >= length r then None
+    else Some (String.get (string_of_rope r) i)
+
+let fold_left f acc r = String.fold_left f acc (string_of_rope r)
