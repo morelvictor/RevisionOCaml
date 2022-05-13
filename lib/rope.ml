@@ -19,8 +19,10 @@ let string_of_rope r =
         | Node(x, y) -> acc ^ (aux "" x) ^ (aux "" y)
     in aux "" r
 
-let nth r i = 
-    if i < 0 || i >= length r then None
-    else Some (String.get (string_of_rope r) i)
+let rec nth r i = 
+    if i < 0 || i >= length r then None 
+    else match r with 
+        | Leaf(s) -> (if (String.length s) < i then None else Some(String.get s i))
+        | Node(x, y) -> (if length x > i then nth x i else nth y (i- (length y)))
 
 let fold_left f acc r = String.fold_left f acc (string_of_rope r)

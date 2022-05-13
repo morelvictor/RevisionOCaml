@@ -16,9 +16,8 @@ let example1 =
 let example2 = Node(Leaf("Hello, "), Leaf("world!"))
 *)
 
-let uniter a = match a with _ -> ()
 
-let () = 
-    uniter(make 2 10);
-    print_endline("");
+let example = make "-" 10
+
+let () = ()
 
