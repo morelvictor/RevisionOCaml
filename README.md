@@ -32,7 +32,7 @@ Définissez une valeur `example2 : rope` différente de `example1`, mais qui cod
 ### Question 9: 
 Écrivez une fonction `fold_left : ('a -> char -> 'a) -> 'a -> rope -> 'a` telle que fold_left f init rope calcule init |> f c0 |> f c1 |> ... |> f cn-1, où c0, ..., cn-1 sont les caractères de rope. Vous pourrez vous aider de la fonction `String.fold_left : ('a -> char -> 'a) -> 'a -> string -> 'a` qui accomplit la même opération pour les chaînes de caractères.
 
-### Quetion bonus (plus difficile): 
+### Question bonus (plus difficile): 
 Écrivez une fonction `split_at : rope -> int -> rope * rope` qui sépare une corde en deux à un indice donné. 
 Attention, cette fonction doit préserver au maximum la structure de l'arbre passé en argument.
 
