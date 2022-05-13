@@ -13,3 +13,6 @@ val nth: rope -> int -> char option
 
 val fold_left: ('a -> char -> 'a) -> 'a -> rope -> 'a
 
+val split_at: rope -> int -> (rope * rope)
+
+val show: rope -> unit
